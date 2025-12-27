@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.cta {
+  background: orange;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
