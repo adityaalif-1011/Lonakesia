@@ -26,7 +26,6 @@ const Navbar = () => (
 const Hero = () => (
   <section className="hero">
     <div className="container text-center">
-      <div className="badge">Lestarikan Budaya Bangsa</div>
       <h1 className="hero-title">
         Kuasai bahasa <br />
         <span className="serif-italic">daerah kita—</span> 
