@@ -1,11 +1,6 @@
 import React from 'react';
 import { Globe, Zap, Smartphone, Target, Download, ChevronRight, Star, Map } from 'lucide-react';
 
-/**
- * LOKANESIA - Versi Perbaikan Total (CSS Native)
- * Menggunakan Standard CSS untuk menjamin tampilan muncul meskipun Tailwind bermasalah.
- */
-
 const Navbar = () => (
   <nav className="navbar">
     <div className="container nav-content">
@@ -154,7 +149,7 @@ export default function App() {
         .card-title-small { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
         .card-text { font-size: 18px; color: #333; font-weight: 500; max-width: 320px; }
 
-        .mockup-dialek { position: absolute; bottom: -20px; right: -20px; background: white; width: 80%; height: 50%; border-radius: 40px 0 0 0; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .mockup-dialek { position: absolute; bottom: -80px; right: -20px; background: white; width: 80%; height: 50%; border-radius: 40px 0 0 0; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
         .tag-ngoko { padding: 4px 12px; background: #FFF5F0; color: #FF5C00; border-radius: 20px; font-size: 10px; font-weight: 800; margin-right: 8px; font-style: italic; }
         .tag-kromo { padding: 4px 12px; background: #E0F2FE; color: #0284C7; border-radius: 20px; font-size: 10px; font-weight: 800; font-style: italic; }
         .sample-text { margin-top: 24px; font-size: 24px; font-family: 'Instrument Serif', serif; font-style: italic; color: #aaa; }
