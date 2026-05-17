@@ -1,63 +1,115 @@
+"use client";
+
+import styles from "./Hero.module.css";
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section className="px-6 pt-20 pb-32 text-center">
-      <div className="max-w-5xl mx-auto">
+    <section className={styles.hero}>
+      <div className={`container ${styles.wrapper}`}>
 
-        {/* Title */}
-        <h1 className="text-[clamp(40px,8vw,90px)] leading-[0.95] font-extrabold tracking-tight mb-10">
-          Kuasai bahasa <br />
-          <span className="font-serif italic text-gray-300 font-light">
-            daerah kita—
-          </span>{" "}
-          <span className="relative inline-block">
-            seru,
-            <svg
-              className="absolute -bottom-2 left-0 w-full h-4"
-              viewBox="0 0 100 10"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M1 9C25 2 75 2 99 9"
-                stroke="#FF5C00"
-                strokeWidth="5"
-                strokeLinecap="round"
-                fill="none"
-              />
-            </svg>
-          </span>
-          <br />
-          mudah, & gratis
-        </h1>
+        {/* LEFT */}
 
-        {/* Description */}
-        <p className="max-w-xl mx-auto mb-12 text-xl font-medium text-gray-500">
-          Belajar Bahasa Jawa, Sunda, Bali, hingga Papua dengan metode interaktif
-          yang menyenangkan. Jangan biarkan bahasa daerah kita pudar!
-        </p>
+        <div className={styles.left}>
 
-        {/* CTA */}
-        <button className="bg-orange-500 text-white px-12 py-5 rounded-full text-xl font-extrabold shadow-[0_20px_40px_rgba(255,92,0,0.2)] hover:scale-105 transition">
-          Pilih Bahasa Sekarang
-        </button>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
 
-        {/* Language List */}
-        <div className="mt-24">
-          <p className="mb-8 text-[10px] font-extrabold tracking-[3px] uppercase text-gray-300">
-            Tersedia dalam berbagai bahasa
-          </p>
 
-          <div className="flex flex-wrap justify-center gap-10 text-2xl font-black italic text-gray-300">
-            {["JAWA", "SUNDA", "BALI", "MINANG", "BUGIS", "ACEH"].map(
-              (lang, i) => (
-                <span
-                  key={i}
-                  className="hover:text-orange-500 hover:scale-110 transition cursor-pointer"
-                >
-                  {lang}
-                </span>
-              )
-            )}
-          </div>
+            <h1>
+              Learn Indonesian regional languages in a fun and modern way.
+            </h1>
+
+            <p>
+              Master local expressions, pronunciation,
+and everyday conversations from various
+regions across Indonesia through interactive learning.
+            </p>
+
+            <div className={styles.actions}>
+              <button className={styles.primary}>
+                Explore Now
+              </button>
+
+              <button className={styles.secondary}>
+                Watch Demo
+              </button>
+            </div>
+
+          </motion.div>
+
+        </div>
+
+        {/* RIGHT */}
+
+        <div className={styles.right}>
+
+          {/* SHAPES */}
+
+          <div className={styles.shapeOrange}></div>
+          <div className={styles.shapeYellow}></div>
+          <div className={styles.shapeBlue}></div>
+
+          {/* CHARACTER 1 */}
+
+          <motion.div
+            className={styles.cardOne}
+            animate={{ y: [-8, 8, -8] }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+            }}
+          >
+
+            <div className={styles.character}></div>
+
+            <div className={styles.speechOrange}>
+              Sugeng Rawuh
+            </div>
+
+          </motion.div>
+
+          {/* CHARACTER 2 */}
+
+          <motion.div
+            className={styles.cardTwo}
+            animate={{ y: [8, -8, 8] }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+            }}
+          >
+
+            <div className={styles.characterTwo}></div>
+
+            <div className={styles.speechPink}>
+              Rahajeng Semeng
+            </div>
+
+          </motion.div>
+
+          {/* CHARACTER 3 */}
+
+          <motion.div
+            className={styles.cardThree}
+            animate={{ y: [-6, 6, -6] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+            }}
+          >
+
+            <div className={styles.characterThree}></div>
+
+            <div className={styles.speechBlue}>
+              Horas!
+            </div>
+
+          </motion.div>
+
         </div>
 
       </div>

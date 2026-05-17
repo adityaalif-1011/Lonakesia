@@ -1,20 +1,20 @@
+import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 export const metadata = {
-  title: "Lokanesia - Belajar Bahasa Daerah Indonesia",
-  description: "Platform interaktif untuk belajar bahasa daerah Indonesia dengan cara yang menyenangkan dan efektif.",
+  title: "Lokanesia",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
   );
 }
-
-
-

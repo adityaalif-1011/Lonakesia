@@ -1,0 +1,101 @@
+.explore {
+  padding: 120px 0;
+}
+
+.badge {
+  width: fit-content;
+
+  margin-inline: auto;
+
+  height: 42px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #171717;
+}
+
+.explore h2 {
+  margin: 24px auto 0;
+
+  max-width: 900px;
+
+  text-align: center;
+
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -3px;
+
+  color: #171717;
+}
+
+.explore p {
+  margin: 28px auto 0;
+
+  max-width: 700px;
+
+  text-align: center;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #525252;
+}
+
+.languages {
+  margin-top: 70px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.card {
+  min-width: 150px;
+  height: 72px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.04);
+
+  transition: 0.2s ease;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 6px;
+
+  background: linear-gradient(
+    135deg,
+    #ff7b54,
+    #ffb26b
+  );
+}
+
+.card span {
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #171717;
+}
