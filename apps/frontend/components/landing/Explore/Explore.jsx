@@ -1,19 +1,38 @@
 "use client";
 
 import styles from "./Explore.module.css";
-import { motion } from "framer-motion";
 
 const languages = [
-  "Jawa",
-  "Sunda",
-  "Batak",
-  "Bali",
-  "Bugis",
-  "Minang",
-  "Banjar",
-  "Betawi",
-  "Dayak",
-  "Madura",
+  {
+    language: "Jawa",
+    text: "Sugeng Rawuh",
+    color: "#FFD166",
+  },
+  {
+    language: "Sunda",
+    text: "Wilujeng Sumping",
+    color: "#80ED99",
+  },
+  {
+    language: "Batak",
+    text: "Horas!",
+    color: "#4EA8DE",
+  },
+  {
+    language: "Bali",
+    text: "Rahajeng Semeng",
+    color: "#FFCAD4",
+  },
+  {
+    language: "Bugis",
+    text: "Salama'ki",
+    color: "#F4A261",
+  },
+  {
+    language: "Betawi",
+    text: "Apa Kabar?",
+    color: "#BDB2FF",
+  },
 ];
 
 export default function Explore() {
@@ -22,43 +41,38 @@ export default function Explore() {
 
       <div className="container">
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-
-          <div className={styles.badge}>
-            ✦ Regional Language Learning
-          </div>
-
+        <div className={styles.heading}>
           <h2>
-            Learn Indonesian regional languages in a fun and interactive way.
+            Pilih bahasa daerah
+            yang ingin kamu pelajari
           </h2>
+        </div>
+      </div>
 
-          <p>
-            Explore local expressions, pronunciation,
-            and everyday conversations from various
-            regions across Indonesia.
-          </p>
+      <div className={styles.marquee}>
 
-        </motion.div>
+        <div className={styles.track}>
 
-        <div className={styles.languages}>
-
-          {languages.map((item, index) => (
-            <motion.div
+          {[...languages, ...languages].map((item, index) => (
+            <div
               key={index}
               className={styles.card}
-              whileHover={{
-                y: -6,
+              style={{
+                background: item.color,
               }}
             >
-              <div className={styles.icon}></div>
 
-              <span>{item}</span>
-            </motion.div>
+              <div className={styles.avatar}></div>
+
+              <div>
+
+                <h3>{item.language}</h3>
+
+                <p>{item.text}</p>
+
+              </div>
+
+            </div>
           ))}
 
         </div>

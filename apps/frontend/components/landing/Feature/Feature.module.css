@@ -1,0 +1,328 @@
+.feature {
+  padding: 120px 0;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h2 {
+  max-width: 900px;
+
+  margin-inline: auto;
+
+  font-size: 68px;
+  line-height: 1;
+  letter-spacing: -3px;
+
+  color: #171717;
+}
+
+.heading p {
+  margin: 28px auto 0;
+
+  max-width: 700px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #525252;
+}
+
+/* GRID */
+
+.grid {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+
+.card,
+.cardWide {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 36px;
+
+  padding: 38px;
+
+  min-height: 420px;
+
+  transition: 0.25s ease;
+}
+
+.cardWide {
+  grid-column: span 2;
+
+  min-height: 260px;
+}
+
+/* COLORS */
+
+.yellow {
+  background: #f7dc6f;
+}
+
+.green {
+  background: #cdeac0;
+}
+
+.purple {
+  background: #efc3e6;
+}
+
+.blue {
+  background: #a9def9;
+}
+
+.orange {
+  background: #f7a072;
+}
+
+/* TEXT */
+
+.card h3,
+.cardWide h3 {
+  max-width: 420px;
+
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: -2px;
+
+  color: #171717;
+}
+
+.card p,
+.cardWide p {
+  margin-top: 18px;
+
+  max-width: 420px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: rgba(0,0,0,0.7);
+}
+
+/* CHAT */
+
+.chatBox {
+  position: absolute;
+
+  bottom: 40px;
+  left: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chatBubbleOne,
+.chatBubbleTwo {
+  width: fit-content;
+
+  padding: 16px 20px;
+
+  border-radius: 22px;
+
+  background: white;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+}
+
+.chatBubbleTwo {
+  margin-left: 60px;
+}
+
+/* PROGRESS */
+
+.progressCard {
+  position: absolute;
+
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+
+  padding: 24px;
+
+  border-radius: 28px;
+
+  background: white;
+}
+
+.progressTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressBar {
+  margin-top: 18px;
+
+  width: 100%;
+  height: 14px;
+
+  border-radius: 999px;
+
+  background: #ececec;
+}
+
+.progressFill {
+  width: 78%;
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: #7ed957;
+}
+
+.stats {
+  margin-top: 24px;
+
+  display: flex;
+  gap: 40px;
+}
+
+.stats strong {
+  display: block;
+
+  font-size: 24px;
+}
+
+.stats span {
+  font-size: 14px;
+}
+
+/* STORY */
+
+.storyBox {
+  position: absolute;
+
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+}
+
+.storyCard {
+  width: 100%;
+  height: 180px;
+
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.55);
+
+  backdrop-filter: blur(10px);
+}
+
+.storyLine,
+.storyLineSmall {
+  margin-top: 14px;
+
+  height: 14px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.5);
+}
+
+.storyLine {
+  width: 100%;
+}
+
+.storyLineSmall {
+  width: 70%;
+}
+
+/* VOICE */
+
+.voiceBox {
+  position: absolute;
+
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+}
+
+.wave {
+  width: 100%;
+  height: 90px;
+
+  border-radius: 24px;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      white,
+      white 8px,
+      transparent 8px,
+      transparent 16px
+    );
+}
+
+.voiceButton {
+  margin-top: 20px;
+
+  width: fit-content;
+
+  padding: 16px 22px;
+
+  border-radius: 18px;
+
+  background: white;
+
+  font-weight: 700;
+}
+
+/* GAME */
+
+.gameRow {
+  position: absolute;
+
+  bottom: 40px;
+  left: 40px;
+
+  display: flex;
+  gap: 16px;
+}
+
+.gameBadge {
+  padding: 18px 22px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.45);
+
+  backdrop-filter: blur(10px);
+
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardWide {
+    grid-column: span 1;
+  }
+
+  .heading h2 {
+    font-size: 48px;
+  }
+
+  .card h3,
+  .cardWide h3 {
+    font-size: 36px;
+  }
+
+}

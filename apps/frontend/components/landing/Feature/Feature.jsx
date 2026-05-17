@@ -1,95 +1,224 @@
-import { Map, Zap } from "lucide-react";
+"use client";
 
-export default function Features() {
+import styles from "./Feature.module.css";
+import { motion } from "framer-motion";
+
+export default function Feature() {
   return (
-    <section className="px-6 py-28">
-      <div className="max-w-7xl mx-auto grid grid-cols-12 gap-8">
+    <section className={styles.feature}>
 
-        {/* Card 1 */}
-        <div className="col-span-12 md:col-span-7 relative overflow-hidden rounded-[60px] bg-[#FFF490] p-12 min-h-[520px] flex flex-col">
-          <div className="w-16 h-16 rounded-2xl bg-black/5 flex items-center justify-center mb-8">
-            <Map size={32} />
-          </div>
+      <div className="container">
 
-          <h3 className="text-5xl font-extrabold leading-tight tracking-tight mb-6">
-            Eksplorasi <br /> Ragam Dialek
-          </h3>
+        <div className={styles.heading}>
 
-          <p className="text-lg font-medium max-w-xs">
-            Dari Ngoko hingga Kromo Inggil, pelajari konteks budaya di balik setiap kata.
+          <h2>
+            Belajar bahasa daerah
+            jadi lebih seru dan interaktif
+          </h2>
+
+          <p>
+            Lokanesia menghadirkan pengalaman belajar
+            yang modern, ringan, dan menyenangkan
+            untuk generasi digital Indonesia.
           </p>
 
-          {/* Mockup */}
-          <div className="absolute -bottom-20 -right-5 w-[80%] h-[50%] bg-white rounded-tl-[40px] p-10 shadow-2xl">
-            <div className="flex gap-2 mb-6">
-              <span className="px-3 py-1 text-[10px] font-extrabold italic rounded-full bg-orange-100 text-orange-500">
-                Ngoko
-              </span>
-              <span className="px-3 py-1 text-[10px] font-extrabold italic rounded-full bg-sky-100 text-sky-600">
-                Kromo
-              </span>
+        </div>
+
+        <div className={styles.grid}>
+
+          {/* CARD 1 */}
+
+          <motion.div
+            whileHover={{ y: -6 }}
+            className={`${styles.card} ${styles.yellow}`}
+          >
+
+            <div>
+
+              <h3>
+                AI Percakapan Interaktif
+              </h3>
+
+              <p>
+                Latihan ngobrol menggunakan
+                bahasa daerah secara natural
+                dan real-time.
+              </p>
+
             </div>
-            <p className="font-serif italic text-2xl text-gray-400">
-              “Sugeng Rawuh...”
-            </p>
-          </div>
-        </div>
 
-        {/* Card 2 */}
-        <div className="col-span-12 md:col-span-5 rounded-[60px] bg-[#D1F5D3] p-12 min-h-[520px] flex flex-col">
-          <div className="w-16 h-16 rounded-2xl bg-black/5 flex items-center justify-center mb-8">
-            <Zap size={32} />
-          </div>
+            <div className={styles.chatBox}>
 
-          <h3 className="text-4xl font-extrabold mb-4">
-            Misi Harian
-          </h3>
+              <div className={styles.chatBubbleOne}>
+                Sugeng enjing 👋
+              </div>
 
-          <p className="text-lg font-medium max-w-xs">
-            Belajar kosakata baru setiap pagi sambil minum kopi.
-          </p>
+              <div className={styles.chatBubbleTwo}>
+                Kulo sae!
+              </div>
 
-          <div className="mt-auto bg-white/40 border-2 border-white rounded-3xl p-6">
-            <div className="h-3 bg-green-200 rounded-full overflow-hidden mb-3">
-              <div className="h-full w-[65%] bg-green-600 rounded-full" />
             </div>
-            <span className="text-[10px] font-extrabold uppercase tracking-wider text-green-800">
-              Progres: 12/20 Kata
-            </span>
-          </div>
-        </div>
 
-        {/* Card 3 */}
-        <div className="col-span-12 md:col-span-5 rounded-[60px] bg-[#E7D1FF] p-12 min-h-[520px] flex flex-col items-center justify-center text-center">
-          <div className="w-28 h-28 rounded-full bg-white shadow-xl flex items-center justify-center text-6xl mb-8">
-            🇮🇩
-          </div>
+          </motion.div>
 
-          <h3 className="text-4xl font-extrabold mb-4">
-            Cinta Tanah Air
-          </h3>
+          {/* CARD 2 */}
 
-          <p className="text-lg font-medium max-w-xs">
-            Menjaga warisan budaya tetap hidup.
-          </p>
-        </div>
+          <motion.div
+            whileHover={{ y: -6 }}
+            className={`${styles.card} ${styles.green}`}
+          >
 
-        {/* Card 4 */}
-        <div className="col-span-12 md:col-span-7 rounded-[60px] bg-[#FFD1B9] p-12 min-h-[520px] flex flex-col">
-          <h3 className="text-5xl font-extrabold leading-tight mb-6">
-            Belajar Lewat <br /> Cerita Rakyat.
-          </h3>
+            <div>
 
-          <p className="text-lg font-medium max-w-xs">
-            Dengarkan audio legenda Nusantara dengan pengisian suara asli.
-          </p>
+              <h3>
+                Progress Belajar Harian
+              </h3>
 
-          <button className="mt-10 bg-black text-white px-8 py-4 rounded-2xl font-bold w-fit">
-            Mulai Mendengar
-          </button>
+              <p>
+                Pantau streak, level,
+                dan perkembangan belajar
+                setiap hari.
+              </p>
+
+            </div>
+
+            <div className={styles.progressCard}>
+
+              <div className={styles.progressTop}>
+                <span>Progress Mingguan</span>
+                <strong>78%</strong>
+              </div>
+
+              <div className={styles.progressBar}>
+                <div className={styles.progressFill}></div>
+              </div>
+
+              <div className={styles.stats}>
+
+                <div>
+                  <strong>12</strong>
+                  <span>Streak</span>
+                </div>
+
+                <div>
+                  <strong>4</strong>
+                  <span>Level</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          {/* CARD 3 */}
+
+          <motion.div
+            whileHover={{ y: -6 }}
+            className={`${styles.card} ${styles.purple}`}
+          >
+
+            <div>
+
+              <h3>
+                Cerita Rakyat Interaktif
+              </h3>
+
+              <p>
+                Pelajari bahasa daerah
+                melalui cerita dan budaya
+                lokal Indonesia.
+              </p>
+
+            </div>
+
+            <div className={styles.storyBox}>
+
+              <div className={styles.storyCard}></div>
+
+              <div className={styles.storyLine}></div>
+              <div className={styles.storyLineSmall}></div>
+
+            </div>
+
+          </motion.div>
+
+          {/* CARD 4 */}
+
+          <motion.div
+            whileHover={{ y: -6 }}
+            className={`${styles.card} ${styles.blue}`}
+          >
+
+            <div>
+
+              <h3>
+                Pelafalan Suara
+              </h3>
+
+              <p>
+                Tingkatkan pengucapan
+                dengan analisis suara
+                berbasis AI.
+              </p>
+
+            </div>
+
+            <div className={styles.voiceBox}>
+
+              <div className={styles.wave}></div>
+
+              <div className={styles.voiceButton}>
+                🎤 Mulai Bicara
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          {/* CARD 5 */}
+
+          <motion.div
+            whileHover={{ y: -6 }}
+            className={`${styles.cardWide} ${styles.orange}`}
+          >
+
+            <div>
+
+              <h3>
+                Gamifikasi Belajar
+              </h3>
+
+              <p>
+                Belajar terasa lebih menyenangkan
+                dengan XP, tantangan harian,
+                dan sistem level.
+              </p>
+
+            </div>
+
+            <div className={styles.gameRow}>
+
+              <div className={styles.gameBadge}>
+                🔥 12 Hari
+              </div>
+
+              <div className={styles.gameBadge}>
+                ⭐ 240 XP
+              </div>
+
+              <div className={styles.gameBadge}>
+                🏆 Level 4
+              </div>
+
+            </div>
+
+          </motion.div>
+
         </div>
 
       </div>
+
     </section>
   );
 }
