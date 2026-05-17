@@ -20,22 +20,23 @@ export default function Hero() {
 
 
             <h1>
-              Learn Indonesian regional languages in a fun and modern way.
+             Belajar bahasa daerah
+jadi lebih seru.
             </h1>
 
             <p>
-              Master local expressions, pronunciation,
-and everyday conversations from various
-regions across Indonesia through interactive learning.
+              Pelajari ungkapan lokal, pengucapan,
+  dan percakapan sehari-hari dari berbagai
+  daerah di Indonesia secara interaktif.
             </p>
 
             <div className={styles.actions}>
               <button className={styles.primary}>
-                Explore Now
+                Mulai Belajar
               </button>
 
               <button className={styles.secondary}>
-                Watch Demo
+                Lihat Demo
               </button>
             </div>
 
