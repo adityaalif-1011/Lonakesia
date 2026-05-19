@@ -81,153 +81,36 @@
 .right {
   position: relative;
 
-  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* SHAPES */
-
-.shapeOrange,
-.shapeYellow,
-.shapeBlue {
-  position: absolute;
-
-  border-radius: 40px;
-}
-
-.shapeOrange {
-  width: 300px;
-  height: 220px;
-
-  background: #ffb703;
-
-  top: 180px;
-  left: 20px;
-
-  transform: rotate(-6deg);
-}
-
-.shapeYellow {
-  width: 320px;
-  height: 220px;
-
-  background: #ffcad4;
-
-  top: 20px;
-  right: 20px;
-
-  transform: rotate(6deg);
-}
-
-.shapeBlue {
-  width: 240px;
-  height: 240px;
-
-  background: #4ea8de;
-
-  bottom: 40px;
-  right: 10px;
-
-  transform: rotate(-5deg);
-}
-
-/* CARDS */
-
-.cardOne,
-.cardTwo,
-.cardThree {
-  position: absolute;
-}
-
-/* CHARACTER 1 */
-
-.cardOne {
-  width: 320px;
-  height: 320px;
-
-  top: 0;
-  right: 40px;
-}
-
-/* CHARACTER 2 */
-
-.cardTwo {
-  width: 340px;
-  height: 340px;
-
-  top: 200px;
-  left: 0;
-}
-
-/* CHARACTER 3 */
-
-.cardThree {
-  width: 240px;
-  height: 240px;
-
-  bottom: 40px;
-  right: 0;
-}
-
-/* PLACEHOLDER CHARACTER */
-
-.character,
-.characterTwo,
-.characterThree {
+.heroImage {
   width: 100%;
-  height: 100%;
+  height: auto;
 
-  border-radius: 32px;
+  max-width: 680px;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,0.8),
-      rgba(255,255,255,0.3)
-    );
+  object-fit: contain;
 
-  backdrop-filter: blur(10px);
-
-  border: 2px dashed rgba(0,0,0,0.1);
+  animation: float 6s ease-in-out infinite;
 }
 
-/* SPEECH */
+@keyframes float {
 
-.speechOrange,
-.speechPink,
-.speechBlue {
-  position: absolute;
+  0% {
+    transform: translateY(0px);
+  }
 
-  padding: 12px 18px;
+  50% {
+    transform: translateY(-12px);
+  }
 
-  border-radius: 999px;
+  100% {
+    transform: translateY(0px);
+  }
 
-  color: white;
-
-  font-size: 18px;
-  font-weight: 800;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.speechOrange {
-  background: #ff7b54;
-
-  top: 80px;
-  left: -20px;
-}
-
-.speechPink {
-  background: #e879f9;
-
-  top: 40px;
-  right: -10px;
-}
-
-.speechBlue {
-  background: #3b82f6;
-
-  bottom: 20px;
-  left: -20px;
 }
 
 /* RESPONSIVE */

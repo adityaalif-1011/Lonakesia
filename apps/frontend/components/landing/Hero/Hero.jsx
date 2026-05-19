@@ -2,10 +2,12 @@
 
 import styles from "./Hero.module.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
+
       <div className={`container ${styles.wrapper}`}>
 
         {/* LEFT */}
@@ -18,19 +20,19 @@ export default function Hero() {
             transition={{ duration: 0.7 }}
           >
 
-
             <h1>
-             Belajar bahasa daerah
-jadi lebih seru.
+              Belajar bahasa daerah
+              jadi lebih seru.
             </h1>
 
             <p>
               Pelajari ungkapan lokal, pengucapan,
-  dan percakapan sehari-hari dari berbagai
-  daerah di Indonesia secara interaktif.
+              dan percakapan sehari-hari dari berbagai
+              daerah di Indonesia secara interaktif.
             </p>
 
             <div className={styles.actions}>
+
               <button className={styles.primary}>
                 Mulai Belajar
               </button>
@@ -38,6 +40,7 @@ jadi lebih seru.
               <button className={styles.secondary}>
                 Lihat Demo
               </button>
+
             </div>
 
           </motion.div>
@@ -48,72 +51,19 @@ jadi lebih seru.
 
         <div className={styles.right}>
 
-          {/* SHAPES */}
-
-          <div className={styles.shapeOrange}></div>
-          <div className={styles.shapeYellow}></div>
-          <div className={styles.shapeBlue}></div>
-
-          {/* CHARACTER 1 */}
-
-          <motion.div
-            className={styles.cardOne}
-            animate={{ y: [-8, 8, -8] }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-            }}
-          >
-
-            <div className={styles.character}></div>
-
-            <div className={styles.speechOrange}>
-              Sugeng Rawuh
-            </div>
-
-          </motion.div>
-
-          {/* CHARACTER 2 */}
-
-          <motion.div
-            className={styles.cardTwo}
-            animate={{ y: [8, -8, 8] }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-            }}
-          >
-
-            <div className={styles.characterTwo}></div>
-
-            <div className={styles.speechPink}>
-              Rahajeng Semeng
-            </div>
-
-          </motion.div>
-
-          {/* CHARACTER 3 */}
-
-          <motion.div
-            className={styles.cardThree}
-            animate={{ y: [-6, 6, -6] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-            }}
-          >
-
-            <div className={styles.characterThree}></div>
-
-            <div className={styles.speechBlue}>
-              Horas!
-            </div>
-
-          </motion.div>
+          <Image
+            src="/hero-right.png"
+            alt="Lokanesia Characters"
+            width={1400}
+            height={1400}
+            className={styles.heroImage}
+            priority
+          />
 
         </div>
 
       </div>
+
     </section>
   );
 }
