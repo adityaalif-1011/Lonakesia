@@ -1,0 +1,70 @@
+.cta {
+  padding-bottom: 120px;
+}
+
+.box {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 40px;
+
+  padding: 90px 40px;
+
+  background: #171717;
+
+  text-align: center;
+}
+
+.box h2 {
+  max-width: 900px;
+
+  margin-inline: auto;
+
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -4px;
+
+  color: white;
+}
+
+.box p {
+  margin: 30px auto 0;
+
+  max-width: 650px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: rgba(255,255,255,0.7);
+}
+
+.box button {
+  margin-top: 42px;
+
+  height: 60px;
+  padding: 0 32px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: #ff6b35;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.box button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+
+  .box h2 {
+    font-size: 48px;
+  }
+
+}
