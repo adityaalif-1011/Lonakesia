@@ -1,9 +1,18 @@
 "use client";
 
 import styles from "./Navbar.module.css";
+import {useAuthModal} from "@/context/AuthModalContext";  
 import { Menu } from "lucide-react";
+import {useRouter} from "next/navigation";
+
+
 
 export default function Navbar() {
+  const router = useRouter();
+  const {
+    openLogin,
+  } = useAuthModal();
+
   return (
     <header className={styles.navbar}>
       <div className={`container ${styles.wrapper}`}>
@@ -22,12 +31,14 @@ export default function Navbar() {
         </nav>
 
         <div className={styles.right}>
-          <button className={styles.login}>
-            Sign In
+          <button onClick={openLogin} className={styles.login}>
+            Masuk
           </button>
 
-          <button className={styles.cta}>
-            Start Exploring
+          <button 
+          onClick={() => router.push("/dashboard")}
+          className={styles.cta}>
+            Mulai Belajar 
           </button>
         </div>
 
